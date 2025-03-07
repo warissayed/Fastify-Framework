@@ -1,8 +1,11 @@
 import Fastify from "fastify";
+import userRouter from "./routes/user.js";
 
 const fastify = Fastify({
   logger: true,
 });
+
+fastify.register(userRouter, { prefix: "/user" });
 
 fastify.get("/", async (request, reply) => {
   return { hello: "world" };
