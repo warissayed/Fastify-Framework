@@ -8,6 +8,15 @@ const CreateUserSchema = {
       name: { type: "string" },
     },
   },
+  response: {
+    201: {
+      type: "object",
+      properties: {
+        id: { type: "string" },
+        message: { type: "string" },
+      },
+    },
+  },
 };
 
 async function userRouter(fastify, options) {
@@ -16,7 +25,9 @@ async function userRouter(fastify, options) {
     { schema: CreateUserSchema },
     (request, reply) => {
       //validation request
-      return { message: "user Created" };
+      console.log(request.body);
+      reply.code(201);
+      return { message: "user Created", id: "123" };
     }
   );
 }
