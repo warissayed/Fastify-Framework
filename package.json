@@ -1,0 +1,29 @@
+{
+  "name": "fastify-framework",
+  "version": "1.0.0",
+  "description": "Fastify-franework demonstration project",
+  "homepage": "https://github.com/warissayed/Fastify-Framework#readme",
+  "bugs": {
+    "url": "https://github.com/warissayed/Fastify-Framework/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/warissayed/Fastify-Framework.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc & nodemon --ext js,ts dist/index.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fastify": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "typescript": "^5.8.2"
+  }
+}
